@@ -1,0 +1,438 @@
+:root {
+    --color-text: #7A7A7A;
+    --color-text-button: #F3C653;
+  
+    --color-text-link: #C79002;
+  
+    --color-button: rgba(0, 0, 0, 0.4);
+    --color-button-hover: #FFFFFF;
+  
+    --back-color-footer: #0E0C07;
+    --back-color-criam: #FFFDEE;
+    --back-color-criam-dark: #F0ECD6;
+    --transform: ;
+  }
+  
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  :active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+  
+  h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+  }
+  ul, li, a, p {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  button, link {
+    cursor: pointer;
+  }
+  
+  /* приховати код */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  .section {
+    margin: 0 auto;
+    background-color: var(--back-color-criam);
+  }
+  .container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 414px;
+  }
+  /*--button--*//*--button--*/
+  .button-blak,
+  .button-transparent,
+  .button-big,
+  .button-big-pointed {
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+    min-width: 236px;
+    height: 48px;
+    padding: 14px 35px;
+    background-color: #000000;
+    border: 2px solid var(--back-color-criam);
+    border-radius: 25px;
+  
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: var(--color-text-button);
+  }
+  .button-transparent {
+    background-color: var(--color-button);
+  }
+  .button-blak:hover, .button-blak:focus,
+  .button-transparent:hover, .button-transparent:focus {
+    background-color: #FFFFFF;
+    border: 2px solid var(--color-text-button);
+  }
+  .button-big,
+  .button-big-pointed {
+    min-width: 384px;
+    height: 64px;
+    padding: 20px 43px;
+    border: 1px solid var(--color-text-button);
+  
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #FFFFFF;
+  }
+  .button-big-pointed {
+    border-radius: 2px;
+  }
+  .button-big:hover, .button-big:focus,
+  .button-big-pointed:hover, .button-big-pointed:focus {
+    background-color: var(--color-text-button);
+    color: #000000;
+  }
+
+  
+    /*-----------MODAL-TABLE---------------*/
+
+    .table-modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 416px;
+        min-height: 668px;
+        padding: 60px 15px;
+        
+        background: #FFFDEE;
+        border-radius: 2px;
+
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    
+        transform: translate(-50%, -50%) scale(1) rotate(0);
+        transition: transform 250ms linear;
+    }
+    
+
+    .backdrop.is-hidden .modal {
+        transform: translate(-50%, -50%) scale(0) rotate(-360deg);
+    }
+    
+    .modal-close-btn {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        color: #000;
+        background-color: #E7E9FC;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 0;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+    }
+    
+    .modal-close-btn-icon {
+        color: #000;
+    }
+    
+    .modal-close-btn:hover,
+    .modal-close-btn:focus {
+        fill: #FFFFFF;
+        background-color: #404BBF;
+    }
+    
+    
+    .is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    
+    /*---Modal Form Table---*/
+    
+    .modal-form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .table-modal-text,
+    .room-modal-text,
+    .room-rates-modal-text  {
+    width: 100%;
+    padding: 0 31px;
+    margin-bottom: 40px;
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    }
+    
+    .room-rates-modal-text  {
+      width: 100%;
+      padding: 0 82px;
+
+      }
+
+    .modal-form-field {
+        display: block;
+
+    }
+    
+    .table-input-desc {
+        display: block;
+        margin-left: 12px;
+        margin-bottom: 20px;
+
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+
+        letter-spacing: 0.02em;
+
+        color: #C79002;
+
+    }
+    
+    .modal-form-input-wrapper {
+        display: block;
+        position: relative;
+    }
+    
+
+
+    .table-modal-input, 
+    .table-persons,
+    .room-rates-category,
+    .room-category,
+    .room-rates-day {
+        outline: none;
+        width: 100%;
+        height: 56px;
+        margin-bottom: 8px;
+
+        font-family: 'Times New Roman';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.05em;
+
+        color: #808080;
+        background: #FFFDEE;
+
+        border: 1px solid #C79002;
+
+        padding-left: 12px;
+
+        transition: border-color var(--transition);
+    }
+
+        .room-rates-category {
+        border: 1px solid transparent;
+    }
+
+    .modal-form-input:focus {
+        border: 1px solid #4D5AE5;
+    }
+    
+    .modal-form-input:focus + .modal-form-input-icon {
+        fill: #4D5AE5;
+    }
+    
+    .modal-form-input-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 19px;
+        display: block;
+        fill: #2E2F42;
+        transition: background-color var(--transition);
+    }
+    
+
+    
+    
+    .modal-form-btn {
+        
+        display: block;
+        margin: 0 auto;
+        padding: 20px 43px;
+        margin-top: 60px;
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.05em;
+
+        color: #FFFFFF;
+    
+        min-width: 384px;
+        height: 64px;
+
+        background: #000000;
+
+        border: 1px solid #F3C653;
+        border-radius: 2px;
+    
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+        border-color: transparent;
+        cursor: pointer;
+        transition: background var(--transition), box-shadow var(--transition);
+        }
+
+    .table-persons {
+        position: relative;
+        display: inline-block;
+        }
+
+/*-----------MODAL-ROOM---------------*/
+
+.room-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 416px;
+    min-height: 780px;
+    padding: 60px 15px;
+    
+    background: var(--back-color-criam);
+    border-radius: 2px;
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+    transition: transform 250ms linear;
+}
+
+.room-rates {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 416px;
+    min-height: 572px;
+    padding: 60px 15px;
+    
+    background: var(--back-color-criam);
+    border-radius: 2px;
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+    transition: transform 250ms linear;
+}
+
+
+  /*---*//*---*//*---*//*---*//*---*//*---*//*---*//*---*//*---*//*---*//*---*/
+  
+  
+  @media screen and (min-width: 1024px) {
+    .container {
+      min-width: 1024x;
+    }
+    .button-big-pointed {
+      min-width: 592px;
+      font-size: 24px;;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .container {
+      min-width: 1280x;
+    }
+    .button-big {
+      min-width: 434px;
+      height: 65px;
+      font-size: 24px;;
+    }
+  }
+
+
+        /*.table-persons::after {
+            content: "▼";
+            padding: 0 8px;
+            font-size: 12px;
+            position: absolute;
+            right: 8px;
+            top: 4px;
+            z-index: 1;
+            text-align: center;
+            width: 10%;
+            height: 100%;
+            pointer-events: none;
+            box-sizing: border-box;
+        }*/
+
+/*.table-persons
+{
+    width: 100%;
+    margin: 0px 0px 12px 10px;
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow: 0px 1px 1px rgb(0 0 0 / 10%) inset;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 10%) inset;
+    color: #000000;
+    font-size: 15px;
+    padding: 3px 3px 3px 2px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    height: 28px;
+    font-size: 13px;
+    line-height: 28px;
+
+
+style="" title="" onchange="easyreservations_send_price('easy-form-54509');easyreservations_send_validate(false,'easy-form-54509');"
+
+     }*/
