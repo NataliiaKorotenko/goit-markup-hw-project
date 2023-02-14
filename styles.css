@@ -1,136 +1,136 @@
 :root {
-    --color-text: #7A7A7A;
-    --color-text-button: #F3C653;
-  
-    --color-text-link: #C79002;
-  
-    --color-button: rgba(0, 0, 0, 0.4);
-    --color-button-hover: #FFFFFF;
-  
-    --back-color-footer: #0E0C07;
-    --back-color-criam: #FFFDEE;
-    --back-color-criam-dark: #F0ECD6;
-    --transform: ;
-  }
-  
-  html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  :active, :hover, :focus {
-    outline: 0;
-    outline-offset: 0;
-  }
-  
-  h1, h2, h3, h4 {
-    margin: 0;
-    padding: 0;
-  }
-  ul, li, a, p {
-    text-decoration: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  button, link {
-    cursor: pointer;
-  }
-  
-  /* приховати код */
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  
-  .section {
-    margin: 0 auto;
-    background-color: var(--back-color-criam);
-  }
-  .container {
-    margin: 0 auto;
-    padding: 0 15px;
-    max-width: 414px;
-  }
-  /*--button--*//*--button--*/
-  .button-blak,
-  .button-transparent,
-  .button-big,
-  .button-big-pointed {
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
-    min-width: 236px;
-    height: 48px;
-    padding: 14px 35px;
-    background-color: #000000;
-    border: 2px solid var(--back-color-criam);
-    border-radius: 25px;
-  
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.02em;
-    color: var(--color-text-button);
-  }
-  .button-transparent {
-    background-color: var(--color-button);
-  }
-  .button-blak:hover, .button-blak:focus,
-  .button-transparent:hover, .button-transparent:focus {
-    background-color: #FFFFFF;
-    border: 2px solid var(--color-text-button);
-  }
-  .button-big,
-  .button-big-pointed {
-    min-width: 384px;
-    height: 64px;
-    padding: 20px 43px;
-    border: 1px solid var(--color-text-button);
-  
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    color: #FFFFFF;
-  }
-  .button-big-pointed {
-    border-radius: 2px;
-  }
-  .button-big:hover, .button-big:focus,
-  .button-big-pointed:hover, .button-big-pointed:focus {
-    background-color: var(--color-text-button);
-    color: #000000;
-  }
+  --color-text: #7A7A7A;
+  --color-text-button: #F3C653;
 
+  --color-text-link: #C79002;
+
+  --color-button: rgba(0, 0, 0, 0.4);
+  --color-button-hover: #FFFFFF;
+
+  --back-color-footer: #0E0C07;
+  --back-color-criam: #FFFDEE;
+  --back-color-criam-dark: #F0ECD6;
+
+  --transition-default: 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+ul, li, a, p {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button, link {
+  cursor: pointer;
+}
+
+/* приховати код */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section {
+  margin: 0 auto;
+  background-color: var(--back-color-criam);
+}
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 414px;
+}
+/*--button--*//*--button--*/
+.button-black,
+.button-transparent,
+.button-big,
+.button-big-pointed {
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  min-width: 236px;
+  height: 48px;
+  /* padding: 14px 24px; */
+  background-color: #000000;
+  border: 2px solid var(--back-color-criam);
+  border-radius: 25px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: var(--color-text-button);
+}
+.button-transparent {
+  background-color: var(--color-button);
+}
+.button-black:hover, .button-black:focus,
+.button-transparent:hover, .button-transparent:focus {
+  background-color: #FFFFFF;
+  border: 2px solid var(--color-text-button);
+}
+.button-big,
+.button-big-pointed {
+  min-width: 384px;
+  height: 64px;
+  padding: 20px 43px;
+  border: 1px solid var(--color-text-button);
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+.button-big-pointed {
+  border-radius: 2px;
+}
+.button-big:hover, .button-big:focus,
+.button-big-pointed:hover, .button-big-pointed:focus {
+  background-color: var(--color-text-button);
+  color: #000000;
+}
   
     /*-----------MODAL-TABLE---------------*/
 
@@ -142,7 +142,7 @@
         min-height: 668px;
         padding: 60px 15px;
         
-        background: #FFFDEE;
+        background: var(--back-color-criam);
         border-radius: 2px;
 
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -158,30 +158,28 @@
     
     .modal-close-btn {
         position: absolute;
-        top: 24px;
-        right: 24px;
+        top: 18.57px;
+        right: 19.43px;
         display: block;
         justify-content: center;
         align-items: center;
-        width: 24px;
-        height: 24px;
-        color: #000;
-        background-color: #E7E9FC;
-        border-radius: 50%;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        color: var(--back-color-footer);
+        background-color: var(--back-color-criam);
+        border: 1.5px solid transparent;
         padding: 0;
         transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
     }
     
     .modal-close-btn-icon {
-        color: #000;
+        color: #D9D9D9;;
+        
     }
     
     .modal-close-btn:hover,
     .modal-close-btn:focus {
-        fill: #FFFFFF;
-        background-color: #404BBF;
+        fill: var(--color-button-hover);
+        background-color: var(--back-color-footer);
     }
     
     
@@ -204,6 +202,7 @@
     width: 100%;
     padding: 0 31px;
     margin-bottom: 40px;
+    text-align: center;
     font-family: 'Times New Roman';
     font-style: normal;
     font-weight: 700;
@@ -238,7 +237,7 @@
 
         letter-spacing: 0.02em;
 
-        color: #C79002;
+        color: var(--color-text-link);
 
     }
     
@@ -253,7 +252,8 @@
     .table-persons,
     .room-rates-category,
     .room-category,
-    .room-rates-day {
+    .room-rates-days,
+    .room-rates-input {
         outline: none;
         width: 100%;
         height: 56px;
@@ -267,25 +267,44 @@
         letter-spacing: 0.05em;
 
         color: #808080;
-        background: #FFFDEE;
+        background: var(--back-color-criam);
 
-        border: 1px solid #C79002;
+        border: 1px solid var(--color-text-link);
 
         padding-left: 12px;
 
         transition: border-color var(--transition);
+
+       appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
     }
 
-        .room-rates-category {
+    .click-icon {
+      fill: var(--color-text-link);
+      position: absolute;
+      right: 8.47%;
+      top: 31.25%;
+      bottom: 20.89%;
+  }
+
+    .room-rates-category {
         border: 1px solid transparent;
     }
 
-    .modal-form-input:focus {
-        border: 1px solid #4D5AE5;
+    .select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+    
+  
+    .table-modal-input:focus {
+        border: 1px solid var(--back-color-footer);
     }
     
     .modal-form-input:focus + .modal-form-input-icon {
-        fill: #4D5AE5;
+        fill: #5b22e0;
     }
     
     .modal-form-input-icon {
@@ -315,14 +334,14 @@
         line-height: 24px;
         letter-spacing: 0.05em;
 
-        color: #FFFFFF;
+        color: var(--color-button-hover);
     
-        min-width: 384px;
+        min-width: 38px;
         height: 64px;
 
-        background: #000000;
+        background: var(--back-color-footer);
 
-        border: 1px solid #F3C653;
+        border: 1px solid var(--color-text-button);
         border-radius: 2px;
     
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -356,7 +375,9 @@
     transition: transform 250ms linear;
 }
 
-.room-rates {
+
+
+/*.room-rates {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -371,16 +392,73 @@
 
     transform: translate(-50%, -50%) scale(1) rotate(0);
     transition: transform 250ms linear;
-}
+}*/
 
 
   /*---*//*---*//*---*//*---*//*---*//*---*//*---*//*---*//*---*//*---*//*---*/
-  
-  
   @media screen and (min-width: 1024px) {
     .container {
-      min-width: 1024x;
+      width: 1024px;
+      padding: 0 47px;
     }
+
+  .table-modal {
+    width: 712px;
+    min-height: 522px;
+    padding: 60px;
+  }
+
+.table-block {
+  display: inline-block;
+  gap: 15px;
+}
+
+.table-modal-input, 
+.table-persons,
+.room-rates-category,
+.room-category {
+  width: 288px;
+  height: 64px;
+}
+
+.room-modal {
+  width: 712px;
+  min-height: 638px;
+  padding: 60px;
+}
+.room-block  {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.button-big-pointed {
+
+}
+/*.room-rates {
+  width: 712px;
+  min-height: 489px;
+  padding: 60px;
+}
+
+.room-rates-tablet {
+  width: 592px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.modal-form-input-tablet {
+  width: calc((100% - 15px) / 2);
+}
+
+.room-rates-days,
+.room-rates-input {
+      width: 288px;
+      height: 64px; 
+    }*/
+
     .button-big-pointed {
       min-width: 592px;
       font-size: 24px;;
@@ -388,7 +466,8 @@
   }
   @media screen and (min-width: 1280px) {
     .container {
-      min-width: 1280x;
+      width: 1280px;
+      padding: 0 85px;
     }
     .button-big {
       min-width: 434px;
