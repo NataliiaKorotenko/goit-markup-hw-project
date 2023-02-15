@@ -52,8 +52,7 @@ img {
 button, link {
   cursor: pointer;
 }
-
-/* приховати код */
+/*приховати код*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -131,10 +130,37 @@ button, link {
   background-color: var(--color-text-button);
   color: #000000;
 }
+/*--------------------
+.overlay {
+
+  opacity: 0;
+  visibility: hidden;
   
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 20;
+  transition: .3s all;
+}
+*/
+
+.modal {
+  position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
     /*-----------MODAL-TABLE---------------*/
 
-    .table-modal {
+
+
+.table-modal {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -151,10 +177,9 @@ button, link {
         transition: transform 250ms linear;
     }
     
-
-    .backdrop.is-hidden .modal {
-        transform: translate(-50%, -50%) scale(0) rotate(-360deg);
-    }
+   .modal.is-hidden .table-modal {
+     transform: translate(-50%, -50%) scale(0) rotate(0);
+  }
     
     .modal-close-btn {
         position: absolute;
@@ -182,14 +207,24 @@ button, link {
         background-color: var(--back-color-footer);
     }
     
-    
+  /*.modal.active,
+  .overlay.active {
+   opacity: 1;
+   visibility: visible;
+}
+    /*.modal
+.overlay.active{
+   opacity: 1;
+   visibility: visible;
+}*/
+   
     .is-hidden {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
     }
     
-    /*---Modal Form Table---*/
+    /*-----------------Modal Form Table-----------------------*/
     
     .modal-form {
         display: flex;
@@ -200,7 +235,6 @@ button, link {
     .room-modal-text,
     .room-rates-modal-text  {
     width: 100%;
-    padding: 0 31px;
     margin-bottom: 40px;
     text-align: center;
     font-family: 'Times New Roman';
@@ -273,7 +307,7 @@ button, link {
 
         padding-left: 12px;
 
-        transition: border-color var(--transition);
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
        appearance: none;
         -moz-appearance: none;
@@ -299,27 +333,19 @@ button, link {
   }
     
   
-    .table-modal-input:focus {
+    .table-modal-input:focus,
+    .room-category:focus {
         border: 1px solid var(--back-color-footer);
     }
-    
-    .modal-form-input:focus + .modal-form-input-icon {
-        fill: #5b22e0;
-    }
-    
-    .modal-form-input-icon {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 19px;
-        display: block;
-        fill: #2E2F42;
-        transition: background-color var(--transition);
-    }
-    
 
-    
-    
+  .button-big-pointed {
+  position: absoulte;
+  bottom: 0;
+  margin-top: 30px;
+  padding: 20px 28px;
+
+  }
+    /*
     .modal-form-btn {
         
         display: block;
@@ -349,7 +375,7 @@ button, link {
         border-color: transparent;
         cursor: pointer;
         transition: background var(--transition), box-shadow var(--transition);
-        }
+        }*/
 
     .table-persons {
         position: relative;
@@ -364,7 +390,7 @@ button, link {
     left: 50%;
     width: 416px;
     min-height: 780px;
-    padding: 60px 15px;
+    padding: 60px 15px 60px 15px;
     
     background: var(--back-color-criam);
     border-radius: 2px;
@@ -373,6 +399,10 @@ button, link {
 
     transform: translate(-50%, -50%) scale(1) rotate(0);
     transition: transform 250ms linear;
+}
+
+.modal.is-hidden .room-modal {
+  transform: translate(-50%, -50%) scale(0) rotate(0);
 }
 
 
@@ -408,34 +438,37 @@ button, link {
     padding: 60px;
   }
 
-.table-block {
-  display: inline-block;
-  gap: 15px;
-}
+  .table-form  {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.table-modal-input, 
-.table-persons,
-.room-rates-category,
-.room-category {
-  width: 288px;
-  height: 64px;
-}
+  .table-block {
+    display: inline-block;
+    gap: 15px;
+  }
 
-.room-modal {
-  width: 712px;
-  min-height: 638px;
-  padding: 60px;
-}
-.room-block  {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-}
+  .table-modal-input, 
+  .table-persons,
+  .room-rates-category,
+  .room-category {
+    width: 288px;
+    height: 64px;
+  }
 
-.button-big-pointed {
+  .room-modal {
+    width: 712px;
+    min-height: 638px;
+    padding: 60px;
+  }
+  .room-block  {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }
 
-}
-/*.room-rates {
+
+  /*.room-rates {
   width: 712px;
   min-height: 489px;
   padding: 60px;
@@ -476,42 +509,3 @@ button, link {
     }
   }
 
-
-        /*.table-persons::after {
-            content: "▼";
-            padding: 0 8px;
-            font-size: 12px;
-            position: absolute;
-            right: 8px;
-            top: 4px;
-            z-index: 1;
-            text-align: center;
-            width: 10%;
-            height: 100%;
-            pointer-events: none;
-            box-sizing: border-box;
-        }*/
-
-/*.table-persons
-{
-    width: 100%;
-    margin: 0px 0px 12px 10px;
-    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1) inset;
-    -webkit-box-shadow: 0px 1px 1px rgb(0 0 0 / 10%) inset;
-    box-shadow: 0px 1px 1px rgb(0 0 0 / 10%) inset;
-    color: #000000;
-    font-size: 15px;
-    padding: 3px 3px 3px 2px;
-    display: inline-block;
-    vertical-align: middle;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    height: 28px;
-    font-size: 13px;
-    line-height: 28px;
-
-
-style="" title="" onchange="easyreservations_send_price('easy-form-54509');easyreservations_send_validate(false,'easy-form-54509');"
-
-     }*/
