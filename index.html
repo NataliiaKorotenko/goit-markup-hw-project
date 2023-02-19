@@ -50,6 +50,7 @@
     </label>
 
 
+    
     <label class="modal-form-field">
          <span class="modal-form-input-wrapper">
     <input type="tel" name="user_phone" placeholder="+38 (___) ___-__-__" class="table-modal-input" required pattern="([+][0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2})" title="+380XXXXXXXXX"  />
@@ -102,6 +103,7 @@
 </div>-->
 
 
+
   <!--Modal ROOM>-->
   <div class="modal is-hidden" data-modal>
     <div class="room-modal">
@@ -115,13 +117,14 @@
         <div class="room-block">
         <label class="modal-form-field">
             <span class="modal-form-input-wrapper">
-        <input type="text" name="user_name" placeholder="Ваше ім'я" class="table-modal-input" required pattern="^[a-zA-Za]+$" minlength="2" />
+        <input type="text" name="user_name" id="user_name" placeholder="" class="table-modal-input" required pattern="^[a-zA-Za]+$" minlength="2" />
+        <label class="table-modal-input-thing" for="user_name">Ваше ім'я</label>
             <span class="table-input-desc">На кого забронювати столик?</span>
             </span>
         </label>
         <label class="modal-form-field">
              <span class="modal-form-input-wrapper">
-            <input type="tel" name="user_phone" placeholder="+38 (___) ___-__-__" class="table-modal-input" required pattern="([+][0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2})" title="+380XXXXXXXXX"  />
+            <input type="tel" name="user_phone" placeholder="+38 (___) ___-__-__" class="table-modal-input" required pattern="([+][0-9\+]{12})" title="Номер повинен бути в форматі '+380XXXXXXXXX'"  />
         <span class="table-input-desc">Номер телефону</span>
             </span>
          </label>  
@@ -163,10 +166,12 @@
                 <option value="tomorrow">Завтра</option> 
                 <option value="second_tomorrow">Післязавтра</option>
             </select>      
+
         <span class="table-input-desc">Дата виїзду</span>
             </span>
         </label>
     </div> 
+    <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; top: 763px; left: 200.6px; z-index: 6; display: block;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="<Пред"><span class="ui-icon ui-icon-circle-triangle-w">&lt;Пред</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="След>"><span class="ui-icon ui-icon-circle-triangle-e">След&gt;</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">Февраль</span>&nbsp;<span class="ui-datepicker-year">2023</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col"><span title="понедельник">Пн</span></th><th scope="col"><span title="вторник">Вт</span></th><th scope="col"><span title="среда">Ср</span></th><th scope="col"><span title="четверг">Чт</span></th><th scope="col"><span title="пятница">Пт</span></th><th scope="col" class="ui-datepicker-week-end"><span title="суббота">Сб</span></th><th scope="col" class="ui-datepicker-week-end"><span title="воскресенье">Вс</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td></tr><tr><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span></td></tr><tr><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">16</span></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="1" data-year="2023"><a class="ui-state-default ui-state-highlight ui-state-hover" href="#">17</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="1" data-year="2023"><a class="ui-state-default" href="#">18</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="1" data-year="2023"><a class="ui-state-default" href="#">19</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="1" data-year="2023"><a class="ui-state-default" href="#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="1" data-year="2023"><a class="ui-state-default" href="#">21</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="1" data-year="2023"><a class="ui-state-default" href="#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="1" data-year="2023"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="1" data-year="2023"><a class="ui-state-default" href="#">24</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="1" data-year="2023"><a class="ui-state-default" href="#">25</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="1" data-year="2023"><a class="ui-state-default" href="#">26</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="1" data-year="2023"><a class="ui-state-default" href="#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="1" data-year="2023"><a class="ui-state-default" href="#">28</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div>
          <button type="submit" class="button-big-pointed">ОФОРМИТИ БРОНЮВАННЯ</button>
      </form>
     </div>
